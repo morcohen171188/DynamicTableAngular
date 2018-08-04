@@ -1,16 +1,27 @@
-<div class="component-style table-component">
-
-  <div class="component-tag">
-    <span>app-table</span>
+<div class="table-wrapper">
+  <div class="table-header">
+    <div *ngFor="let headline of columns"  class="headline">
+      {{headline}}
+    </div>
   </div>
+  <div class="dynamic-table" appBorder [color]="rowData"  *ngFor="let rowData of data" >
+    <div class="table-row">
+      <div  *ngFor="let rowCell of rowData" class="table-cell">
+        <app-table-row [data]="rowCell"></app-table-row>
+      </div>
+      <div *ngIf="!rowData.showExtendedInfo">
+        <i class="fa fa-angle-down dropdown-btn" (click)="showInfo(rowData)"></i>
+      </div>
+      <div *ngIf="rowData.showExtendedInfo">
+        <i class="fa fa-remove dropdown-btn" (click)="hideInfo(rowData)"></i>
+      </div>
+    </div>
+    <div *ngIf="rowData.showExtendedInfo">
+      <div>
+        <app-table-row [data]="rowData.extendedInfoComp"></app-table-row>
+      </div>
 
-  <br>
-
-  <table>
-    <tr>
-      <th *ngFor="let c of columns">{{c}}</th>
-    </tr>
-    <tr class="component-style table-row-component" *ngFor="let ch of characters | async" app-table-row  [character]="ch" [columns]="columns">
-    </tr>
-  </table>
+    </div>
+  </div>
 </div>
+

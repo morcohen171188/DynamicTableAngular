@@ -6,12 +6,12 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./expanded-info.component.css']
 })
 export class ExpandedInfoComponent implements OnInit {
-  extra_data;
+  extended_data;
   @Input() data: any;
   constructor() { }
 
   ngOnInit() {
-    this.extra_data = this.data['']; // TODO: ADD THE DATA
+    this.extended_data = this.data['data'];
   }
 
 }

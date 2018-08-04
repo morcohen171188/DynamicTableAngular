@@ -1,0 +1,48 @@
+{
+  "data": [{
+    "id": 0,
+    "columns": {
+      "Rule Identifiers" : {"title": "main_FW","values":[10,"Allow"],"left_border_color":"red"},
+      "Source": {"values" : ["Any", "Iternal1"]} ,
+      "Destination": {"values": ["app1"]} ,
+      "Services/Applications": {"values":["Any", "tftp"] }
+    }
+  },
+    {
+      "id": 1,
+      "columns": {
+        "Rule Identifiers" : {"title": "main_FW","values":[12],"left_border_color":"yellow"},
+        "Source": {"values":["Any", "Development_Network"] },
+        "Destination": {"values":["app0", "app1"] } ,
+        "Services/Applications": {"values": ["Any", "ftp"]}
+      }
+    },
+    {
+      "id": 2,
+      "columns": {
+        "Rule Identifiers" : {"title": "main_FW","values":[13] ,"left_border_color":"grey"},
+        "Source":{"values": ["Any", "Development_Network"]} ,
+        "Destination": {"values": ["app1"]},
+        "Services/Applications": {"values":["Any", "ftp"]}
+      }
+    },
+    {
+      "id": 3,
+      "columns": {
+        "Rule Identifiers" : {"title": "main_FW","values":[14] ,"left_border_color":"red"},
+        "Source": {"values": ["Any", "Development_Network"]} ,
+        "Destination": {"values": ["DMZ"]},
+        "Services/Applications": {"values":["Any", "http"]}
+      }
+    },
+    {
+      "id": 4,
+      "columns": {
+        "Rule Identifiers" : {"title": "main_FW","values":[15] ,"left_border_color":"red"},
+        "Source":{"values": ["Any", "Finance_Windows"]} ,
+        "Destination": {"values":["DB"]} ,
+        "Services/Applications":{"values":["Any", "Tcp-135"]}
+      }
+    }
+  ]
+}

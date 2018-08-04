@@ -1,0 +1,38 @@
+{
+  "data": [{
+    "id": 0,
+    "data": {
+      "hits": "3,220 Hits",
+      "date": "May 23,2017"
+    }
+  }, {
+    "id": 1,
+    "data": {
+      "hits": "4,220 Hits",
+      "date": "May 24,2017"
+    }
+  },
+    {
+      "id": 2,
+      "data": {
+        "hits": "5,220 Hits",
+        "date": "May 25,2017"
+      }
+    },
+    {
+      "id": 3,
+      "data": {
+        "hits": "6,220 Hits",
+        "date": "May 26,2017"
+      }
+    },
+    {
+      "id": 4,
+      "data": {
+        "hits": "7,220 Hits",
+        "date": "May 27,2017"
+      }
+    }
+
+  ]
+}

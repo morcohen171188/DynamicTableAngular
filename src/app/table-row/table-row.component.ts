@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ComponentFactoryResolver, Input, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
+import {ComponentInterface} from '../componentInterface';
 
 @Component({
   selector: 'app-table-row, [app-table-row]', // matches both a tag or an attribute
@@ -7,11 +8,23 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class TableRowComponent implements OnInit {
 
-  @Input() character: any;
+  @Input() data: any;
   @Input() columns: string[];
-  constructor() { }
+  @ViewChild('parent', {read: ViewContainerRef}) // Capture the #parent element
+  parent: ViewContainerRef;
+  constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngOnInit() {
+    this.loadComponent();
+  }
+
+  loadComponent() {
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.data.component);
+    const viewContainerRef = this.parent;
+    viewContainerRef.clear();
+    const componentRef = viewContainerRef.createComponent(componentFactory);
+    (<ComponentInterface>componentRef.instance).data = this.data.data;
+
   }
 
 }

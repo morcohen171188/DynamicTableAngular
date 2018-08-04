@@ -3,19 +3,27 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/delay';
-import { CHARACTERS } from './mock-data';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataServiceService {
-
-  constructor() { }
-
-  getCharacters(): Observable<any[]> {
-    return Observable.of(CHARACTERS).delay(100);
+  url;
+  jsonData;
+  constructor(private http: HttpClient) {
   }
-  getColumns(): string[] {
-    return ['name', 'age', 'species', 'occupation']; }
+
+  getData(): Observable<any[]> {
+    this.url = '../assets/basicInfo.json';
+    this.jsonData = this.http.get(this.url);
+    return this.jsonData;
+  }
+
+  getExtebdedData(): Observable<any[]> {
+    this.url = '../assets/moreInfo.json';
+    this.jsonData = this.http.get(this.url);
+    return this.jsonData;
+  }
 }
 

@@ -1,0 +1,17 @@
+.rule-comp {
+  margin-top: 5px;
+  position: relative;
+}
+
+.rule-title{
+  margin-left: 15%;
+  font-weight: 500;
+  font-size: 10px;
+  color: #391a14;
+}
+
+.rule-value{
+  margin-left: 15%;
+  margin-top: 1%;
+  display: inline-block;
+}
