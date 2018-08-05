@@ -1,5 +1,5 @@
 
-.dynamic-table{
+.generated-table{
   font: normal normal normal 14px/1 FontAwesome;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 90%;
@@ -41,27 +41,27 @@
 }
 
 
-div div.table-cell:not(:first-child){
+.table-cell:not(:first-child){
   border-left: 1.5px solid #e0e0e0;
   height: auto;
   margin: 1% 0;
 }
 
-div div.table-cell:first-child {
+.table-cell:first-child {
   width: 30%;
   display: inline-table;
 }
 
 
-div div.table-cell:not(:first-child) {
+.table-cell:not(:first-child) {
   width: 20%;
 }
 
-div div.headline:not(:first-child){
+.headline:not(:first-child){
   width: 18%;
 }
 
-div div.headline:first-child {
+.headline:first-child {
   width: 28%;
   display: inline-table;
 }

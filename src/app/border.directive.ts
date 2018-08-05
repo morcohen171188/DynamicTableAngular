@@ -9,7 +9,7 @@ export class BorderDirective implements OnInit{
   constructor(private el_ref: ElementRef) {}
   ngOnInit() {
     const borderColor = this.color[0].data.left_border_color;
-    this.el_ref.nativeElement.style.borderLeft = '2px solid'; // sets to grey?
+    this.el_ref.nativeElement.style.borderLeft = '1.5px solid'; // sets to grey?
     this.el_ref.nativeElement.style.borderLeftColor = borderColor;
   }
 }

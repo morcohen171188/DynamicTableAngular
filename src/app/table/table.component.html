@@ -4,7 +4,7 @@
       {{headline}}
     </div>
   </div>
-  <div class="dynamic-table" appBorder [color]="rowData"  *ngFor="let rowData of data" >
+  <div class="generated-table" appBorder [color]="rowData"  *ngFor="let rowData of data" >
     <div class="table-row">
       <div  *ngFor="let rowCell of rowData" class="table-cell">
         <app-table-row [data]="rowCell"></app-table-row>
